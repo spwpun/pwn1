@@ -8,7 +8,8 @@ RUN useradd -m ctf
 
 WORKDIR /home/ctf
 
-RUN cp -R /lib* /home/ctf && \
+# remove the first line when build ubuntu 20.04+
+RUN cp -R /lib* /home/ctf && \     
     cp -R /usr/lib* /home/ctf
 
 RUN mkdir /home/ctf/dev && \
